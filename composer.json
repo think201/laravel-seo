@@ -1,28 +1,37 @@
 {
     "name": "think201/laravel-seo",
     "homepage": "https://think201.com",
-    "keywords": ["laravel", "laravel 5", "seo", "think201", "sdk", "search", "engine", "optimization"],
+    "keywords": [
+        "laravel",
+        "laravel 5",
+        "seo",
+        "think201",
+        "sdk",
+        "search",
+        "engine",
+        "optimization"
+    ],
     "description": "Search Engine Optimization, which is the practice of increasing the quantity and quality of traffic to your website through organic search engine results using laravel-seo by Think201",
     "type": "library",
     "license": "MIT",
     "authors": [{
         "name": "Think201",
-        "email": "seo@think201.com"
+        "email": "hello@think201.com"
     }],
     "minimum-stability": "dev",
     "require": {},
     "autoload": {
         "psr-4": {
-            "Think201\\SEO\\": "src/"
+            "Think201\\LaravelSEO\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Think201\\SEO\\SEOServiceProvider"
+                "Think201\\LaravelSEO\\SEOServiceProvider"
             ],
             "aliases": {
-                "SEO": "Think201\\SEO\\Engine\\Facades\\SEOFacade"
+                "SEO": "Think201\\LaravelSEO\\Engine\\Facades\\SEOFacade"
             }
         }
     }
