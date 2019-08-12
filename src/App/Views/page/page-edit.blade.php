@@ -1,9 +1,10 @@
 @include('SEOView::page.includes.head')
+@include('SEOView::page.includes.layout')
 @include('SEOView::page.includes.header')
-<section class="content-section bg-light" id="create-seo-page">
+<section class="content-section my-5" id="create-seo-page">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-12 mx-auto">
+			<div class="col-lg-12 col-12">
 				<form action="{{route('laravel-seo.post',[$page->id])}}" method="POST">
 					{{ csrf_field() }}
 					<input type="hidden" name="_type" value="edit-seo-page">
@@ -64,7 +65,7 @@
 						</label>
 						<input validator="required" valid-method="blur" type="text"  value="{{$page->twitter_card}}" name="twitter_card" class="form-control">
 					</div>
-					<button class="btn btn-dark js-scroll-trigger" type="submit">Save Changes</button>
+					<button class="btn btn-theme" type="submit">Save Changes</button>
 				</form>
 			</div>
 		</div>
